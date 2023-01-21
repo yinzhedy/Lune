@@ -12,12 +12,12 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-  font-size: small;
+  font-size: large;
 }
 
 #grid-container {
   display: grid;
-  column-count: 3;
+  column-count: 1;
   text-align: center;
   align-items: center;
   height: 100vh;
@@ -28,10 +28,13 @@ code {
 .header { 
   grid-column-start: 1;
   grid-row: 1;
+  font-size:x-large;
+  color: rgba(82, 85, 94, 0.986);
 };
 
 .piano {
   display:inline;
+  width: 100%;
   grid-column-start: 1;
   grid-row: 2;
 }
@@ -40,6 +43,8 @@ code {
 .footer { 
   grid-column-start: 1;
   grid-row: 3;
+  font-size:x-small;
+  color: black;
 };
 
 #kbd {
@@ -57,29 +62,3 @@ display: flex;
 flex: 8;
 justify-content: center;
 }
-
-
-.note {
-flex: 1;
-display: inline-flex;
-align-items: center;
-}
-
-.black {
-justify-content: center;
-position: absolute;
-height: 45%;
-background-color: #474747;
-color: white;
-width: 8%;
-margin: 0 -4%; 
-}
-
-.white {
-flex-flow: column;
-justify-content: flex-end;
-outline: 2px solid #474747;
-color: #474747;
-background-color: #ffffff;
-padding-bottom: 1%;
-} 

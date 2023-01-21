@@ -1,17 +1,18 @@
 import React from 'react';
+import Piano from '../components/piano/piano.js'
 
 const Homepage = () => {
     return (
     <main id="grid-container">
-      <header class="header"> Lune
+      <header className="header"> Lune
       </header>
 
-      <div class="piano" id="keys">
-        <p>piano</p>
+      <div className="piano" id="keys">
+        <Piano/>
       </div>
 
 
-      <footer class ="footer"> 
+      <footer className ="footer"> 
         <p>for you</p>
       </footer>
 

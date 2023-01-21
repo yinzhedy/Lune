@@ -1,0 +1,41 @@
+
+body {
+    background: rgba(82, 85, 94, 0.986);
+  }
+  
+
+  h3{
+    margin-top: 300px;
+    text-align: center;
+    font-size: large;
+  }
+
+  .piano-component {
+    width: 65%;
+  }
+  .container {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  
+.white {
+    position: relative;
+    background-color: whitesmoke;
+    border: 2px solid rgba(219, 220, 223, 0.986);
+    width: 10%;
+    height: 400px;
+    margin: 0 2px;
+    color: grey;
+  }
+  
+  .white.black:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    background-color: grey;
+    right: -25%;
+    width: 50%;
+    height: 50%;
+    z-index: 1;
+  }
