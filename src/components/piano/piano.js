@@ -133,9 +133,23 @@ if(blackKeyIndex>-1) playMusic(blackKeys[blackKeyIndex])
 // function to play sounds
 function playMusic(key){
     console.log("play-music-triggered");
+
+    function turnKeyBlack() {
+        key.style.backgroundColor = "grey";
+    }
+
+    function turnKeyWhite() {
+        key.style.backgroundColor = "white";
+    }
+
+    console.log(key.backgroundColor);
     const audio=document.getElementById(key.dataset.note);
+    console.log(audio.duration * 1000)
     audio.currentTime=0;
-    audio.play(); };
+    audio.play().then(turnKeyBlack());
+    setTimeout(turnKeyWhite, (audio.duration * 100))
+
+        };
 
 
 
