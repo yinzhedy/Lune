@@ -140,6 +140,7 @@ function playMusic(key) {
                 audio.play();
             }
           }
+        return;
     }
 
     else {
@@ -151,6 +152,7 @@ function playMusic(key) {
                 audio.play();
             }
           }
+        return;
 
     }
 

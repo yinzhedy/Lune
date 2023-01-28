@@ -1,7 +1,9 @@
 import React from 'react';
 import Piano from '../components/piano/piano.js'
+import playTwinkleTwinkle from '../hook/playTwinkleTwinkle.js'
 
 const Homepage = () => {
+
     return (
     <main id="grid-container">
       <header className="header"> Lune
@@ -13,6 +15,7 @@ const Homepage = () => {
 
 
       <footer className ="footer"> 
+      <button onClick={(playTwinkleTwinkle)}> play Twinkle Twinkle Little Star</button>
         <p>for you</p>
       </footer>
 
