@@ -124,12 +124,11 @@ let notesSharp = [
 ]
 
 function playMusic(key) {
-    console.log(key)
-    // console.log(notes[0])
 
     let clickedNote = key.dataset.note
 
     console.log(clickedNote)
+
 
     if (clickedNote.includes('#')) {
         for (let i = 0; i < notesSharp.length; i++) {

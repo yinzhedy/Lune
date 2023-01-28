@@ -1,7 +1,8 @@
 import React from 'react';
 import playMusic from './playMusic.js'
+import keyColorChange from './keyColorChange.js';
 
-const rightHandNoteOrder = ['C-4', 'C-4', 'G-4', 'G-4', 'A-4', 'A-4', 'G-4',
+const rightHandNoteOrder = [0, 'C-4', 'C-4', 'G-4', 'G-4', 'A-4', 'A-4', 'G-4',
     'F-4', 'F-4', 'E-4', 'E-4', 'D-4', 'D-4', 'C-4',
     'G-4', 'G-4', 'F-4', 'F-4', 'E-4', 'E-4', 'D-4',
     'G-4', 'G-4', 'F-4', 'F-4', 'E-4', 'E-4', 'D-4',
@@ -24,10 +25,14 @@ const playTwinkleTwinkle = () => {
     const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms))
 
     const playRightNotes = async () => {
-        for (let i = 0; i < rightHandNoteOrder.length; i++) {
+        for (let i = 1; i < rightHandNoteOrder.length; i++) {
             let key = document.getElementById(rightHandNoteOrder[i]);
-            playMusic(key)
-            await wait(750)
+            playMusic(key);
+            let ms = 750;
+            console.log(i)
+            keyColorChange(key, ms);
+            console.log(ms)
+            await wait(ms);
           }
         return;
     }
